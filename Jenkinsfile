@@ -5,7 +5,7 @@
  * Define HOME for containers running in OpenShift
  * Define user.home system property for maven as it relies on /etc/passwd to infer its value
  */
-podTemplate(yaml:'''
+podTemplate(cloud: "openshift", yaml:'''
 spec:
   containers:
   - name: dotnet
